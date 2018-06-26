@@ -51,7 +51,7 @@ Firstly, There are not model checkpoints in the original repo, so everything mus
 + Download VGG16 pretrained on synthtext directly from (https://pan.baidu.com/s/1nvuWqlr)
 + Finetune on ICADR_15 data using settings in (https://github.com/bgshih/seglink/blob/master/exp/sgd/finetune_ic15.json)
 
-Personally I went with Route II to save time and computational resources for now
+Personally I found both routes would result in similar final results. Thus if time and computing resource is of concern, I would recommend Route II
 
 ### Step IV: Train and evaluate the model
 
