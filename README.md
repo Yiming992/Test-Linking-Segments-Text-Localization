@@ -5,9 +5,9 @@ This repo serves as a record of the prcess that I took to test the Linking-Segme
 ## General Results
 Model is trained using ICDAR_2015 dataset and Sythtext dataset. With one NVIDIA Tesla P-100 GPU, Using default parameter settings the finetune process took about 10 hours, while the pretraining took about 25 hours. Loss change during the training can be seen down below. 
 ### Pretrain from converted caffe model
-[alt text](https://github.com/Yiming992/Test-Linking-Segments-Text-Localization/blob/master/pretrain_loss.png)
+![alt text](https://github.com/Yiming992/Test-Linking-Segments-Text-Localization/blob/master/pretrain_loss.png)
 ### Finetune from the pretrained model
-[alt text](https://github.com/Yiming992/Test-Linking-Segments-Text-Localization/blob/master/finetune_after_pretrain.png)
+![alt text](https://github.com/Yiming992/Test-Linking-Segments-Text-Localization/blob/master/finetune_after_pretrain.png)
 ### Finetune from downloaded checkpoints
 ![alt text](https://github.com/Yiming992/Test-Linking-Segments-Text-Localization/blob/master/loss_curve.png)
 Moreover, **results.zip** conatins evaluation results of the trained model on all test images of ICDAR_2015 dataset, produced by evaluation script located at(https://github.com/bgshih/seglink/blob/master/seglink/evaluate.py)
@@ -59,17 +59,6 @@ To train the model, firstly make sure the file paths in (https://github.com/bgsh
 `./manage.py train exp/sgd finetune_ic15`.
 
 To Evaluate the model, simply run `./manage.py test exp/sgd test_ic15`. However, during my evaluation, I have to resize images to 512*512 to avoid an out of memory error
-
-
-## Future Plan
-I am planning to carry out following two tasks in the near future
-
-### Task I:
-Tune hyperparameters in (https://github.com/bgshih/seglink/blob/master/exp/sgd/finetune_ic15.json), to improve finetune performance
-
-### Task II:
-
-Train the complete pipeline from pretrain, finetune to evaluation
 
 ## Additional advice
 
