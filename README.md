@@ -3,9 +3,14 @@
 This repo serves as a record of the prcess that I took to test the Linking-Segments model illustrated in this paper (https://arxiv.org/abs/1703.06520) and implemented in this repo (https://github.com/bgshih/seglink)
 
 ## General Results
-Model is trained using ICDAR_2015 dataset. With one NVIDIA Tesla P-100 GPU, the training process took about 10 hours using the default hyperperameter settings specified at (https://github.com/bgshih/seglink/blob/master/exp/sgd/finetune_ic15.json). Loss change during the training can be seen down below. 
+Model is trained using ICDAR_2015 dataset and Sythtext dataset. With one NVIDIA Tesla P-100 GPU, Using default parameter settings the finetune process took about 10 hours, while the pretraining took about 25 hours. Loss change during the training can be seen down below. 
+### Pretrain from converted caffe model
+[alt text](https://github.com/Yiming992/Test-Linking-Segments-Text-Localization/blob/master/pretrain_loss.png)
+### Finetune from the pretrained model
+[alt text](https://github.com/Yiming992/Test-Linking-Segments-Text-Localization/blob/master/finetune_after_pretrain.png)
+### Finetune from downloaded checkpoints
 ![alt text](https://github.com/Yiming992/Test-Linking-Segments-Text-Localization/blob/master/loss_curve.png)
-Moreover, **results_20180605_081219.zip** conatins evaluation results of the trained model on all test images of ICDAR_2015 dataset, produced by evaluation script located at(https://github.com/bgshih/seglink/blob/master/seglink/evaluate.py)
+Moreover, **results.zip** conatins evaluation results of the trained model on all test images of ICDAR_2015 dataset, produced by evaluation script located at(https://github.com/bgshih/seglink/blob/master/seglink/evaluate.py)
 
 
 ## Steps And Issues Encountered
